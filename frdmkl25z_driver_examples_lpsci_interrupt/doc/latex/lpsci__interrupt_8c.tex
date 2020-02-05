@@ -1,0 +1,48 @@
+\hypertarget{lpsci__interrupt_8c}{}\doxysection{source/lpsci\+\_\+interrupt.c File Reference}
+\label{lpsci__interrupt_8c}\index{source/lpsci\_interrupt.c@{source/lpsci\_interrupt.c}}
+
+
+Hlavny spustaci subor.  
+
+
+{\ttfamily \#include $<$board.\+h$>$}\newline
+{\ttfamily \#include $<$vars.\+h$>$}\newline
+{\ttfamily \#include $<$clock\+\_\+config.\+h$>$}\newline
+{\ttfamily \#include $<$fsl\+\_\+clock.\+h$>$}\newline
+{\ttfamily \#include $<$fsl\+\_\+common.\+h$>$}\newline
+{\ttfamily \#include $<$M\+K\+L25\+Z4.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cmd\+\_\+processing.\+h$>$}\newline
+{\ttfamily \#include $<$led\+\_\+control.\+h$>$}\newline
+{\ttfamily \#include $<$movement.\+h$>$}\newline
+{\ttfamily \#include $<$crc\+\_\+check.\+h$>$}\newline
+{\ttfamily \#include $<$defs.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lpsci__interrupt_8c_adc192c7e11365a030ac0aff5ff09b230}{L\+P\+S\+C\+I\+\_\+\+I\+R\+Q\+Handler}} (void)
+\item 
+int \mbox{\hyperlink{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hlavny spustaci subor. 
+
+Subor obsahuje funkciu hlavnu funkciu main a spravcu preruseni 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lpsci__interrupt_8c_adc192c7e11365a030ac0aff5ff09b230}\label{lpsci__interrupt_8c_adc192c7e11365a030ac0aff5ff09b230}} 
+\index{lpsci\_interrupt.c@{lpsci\_interrupt.c}!LPSCI\_IRQHandler@{LPSCI\_IRQHandler}}
+\index{LPSCI\_IRQHandler@{LPSCI\_IRQHandler}!lpsci\_interrupt.c@{lpsci\_interrupt.c}}
+\doxysubsubsection{\texorpdfstring{LPSCI\_IRQHandler()}{LPSCI\_IRQHandler()}}
+{\footnotesize\ttfamily void L\+P\+S\+C\+I\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na spravu preruseni. Ak je vyvolane prerusenie, prijme sa 1 bajt a ulozi do pola. Ak je sprava cela nastavi sa flag process\+Data na nenulovy. \mbox{\Hypertarget{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{lpsci__interrupt_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{lpsci\_interrupt.c@{lpsci\_interrupt.c}!main@{main}}
+\index{main@{main}!lpsci\_interrupt.c@{lpsci\_interrupt.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funckia main inicializuje komunikiaciu cez L\+P\+S\+CI prostrednictvom preruseni. Nasledne sa zatvoria dvere a na ack odpoved sa vytah inicializuje, co znamena jeho presun na prizemie. V nekonecnej slucke sa kontroluje dostupnost prijatych dat, overi sa typ prijatej spravy s kontrolou crc a vykona dany prikaz. V pripade, ze vytah nic nerobi a bolo stlacenych viac tlacidiel, zacne ich postupne vykonavat. 

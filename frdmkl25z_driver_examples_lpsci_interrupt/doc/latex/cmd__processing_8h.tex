@@ -1,0 +1,71 @@
+\hypertarget{cmd__processing_8h}{}\doxysection{source/cmd\+\_\+processing.h File Reference}
+\label{cmd__processing_8h}\index{source/cmd\_processing.h@{source/cmd\_processing.h}}
+
+
+Subor obsahuje hlavicky funkcii suboru \mbox{\hyperlink{cmd__processing_8c}{cmd\+\_\+processing.\+c}}.  
+
+
+{\ttfamily \#include $<$defs.\+h$>$}\newline
+{\ttfamily \#include $<$led\+\_\+control.\+h$>$}\newline
+{\ttfamily \#include $<$movement.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cmd__processing_8h_a609c001fbd565d2fefaf3d35fd0fd459}{execute\+Command}} (uint8\+\_\+t sender, uint8\+\_\+t \+\_\+data)
+\item 
+void \mbox{\hyperlink{cmd__processing_8h_a18042dba2bb6485eab9d2dacaa10a168}{prepare\+For\+New\+Msg}} (void)
+\item 
+void \mbox{\hyperlink{cmd__processing_8h_ac0fed4fb18bece58c851f7d76f8ebe38}{delay}} (int millis)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{cmd__processing_8h_a614486ec92e3549168b31c4350e47910}{data\+Index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subor obsahuje hlavicky funkcii suboru \mbox{\hyperlink{cmd__processing_8c}{cmd\+\_\+processing.\+c}}. 
+
+Subor obsahuje hlavicky funkcii a deklaraciu premennych pouzitych pri spracovavani prijatych sprav 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cmd__processing_8h_ac0fed4fb18bece58c851f7d76f8ebe38}\label{cmd__processing_8h_ac0fed4fb18bece58c851f7d76f8ebe38}} 
+\index{cmd\_processing.h@{cmd\_processing.h}!delay@{delay}}
+\index{delay@{delay}!cmd\_processing.h@{cmd\_processing.h}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{int}]{millis }\end{DoxyParamCaption})}
+
+Funkcia sposobujuca oneskorenie \mbox{\Hypertarget{cmd__processing_8h_a609c001fbd565d2fefaf3d35fd0fd459}\label{cmd__processing_8h_a609c001fbd565d2fefaf3d35fd0fd459}} 
+\index{cmd\_processing.h@{cmd\_processing.h}!executeCommand@{executeCommand}}
+\index{executeCommand@{executeCommand}!cmd\_processing.h@{cmd\_processing.h}}
+\doxysubsubsection{\texorpdfstring{executeCommand()}{executeCommand()}}
+{\footnotesize\ttfamily void execute\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sender,  }\item[{uint8\+\_\+t}]{\+\_\+data }\end{DoxyParamCaption})}
+
+Hlavicky funkcii
+
+Funkcia spracovavajuca prikazy vsetkych prijatych sprav bez ohladu na ich typ na zaklade adresy odosielatela danej spravy. Dany prikaz moze vyvolat spatnu odpoved alebo iba ulozenie stavu urciteho elementu vytahu v prislusnej premennej
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Adresa odosielatela \\
+\hline
+{\em \+\_\+data} & Prvy bajt dat prijatej spravy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cmd__processing_8h_a18042dba2bb6485eab9d2dacaa10a168}\label{cmd__processing_8h_a18042dba2bb6485eab9d2dacaa10a168}} 
+\index{cmd\_processing.h@{cmd\_processing.h}!prepareForNewMsg@{prepareForNewMsg}}
+\index{prepareForNewMsg@{prepareForNewMsg}!cmd\_processing.h@{cmd\_processing.h}}
+\doxysubsubsection{\texorpdfstring{prepareForNewMsg()}{prepareForNewMsg()}}
+{\footnotesize\ttfamily void prepare\+For\+New\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia resetujuca premenne pouzivane pri prijimani sprav po uspesnom prijati 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cmd__processing_8h_a614486ec92e3549168b31c4350e47910}\label{cmd__processing_8h_a614486ec92e3549168b31c4350e47910}} 
+\index{cmd\_processing.h@{cmd\_processing.h}!dataIndex@{dataIndex}}
+\index{dataIndex@{dataIndex}!cmd\_processing.h@{cmd\_processing.h}}
+\doxysubsubsection{\texorpdfstring{dataIndex}{dataIndex}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t data\+Index}
+
+Deklaracie premennych 

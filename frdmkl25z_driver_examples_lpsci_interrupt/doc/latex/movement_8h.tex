@@ -1,0 +1,134 @@
+\hypertarget{movement_8h}{}\doxysection{source/movement.h File Reference}
+\label{movement_8h}\index{source/movement.h@{source/movement.h}}
+
+
+Subor obsahuje hlavicky funkcii suboru \mbox{\hyperlink{movement_8c}{movement.\+c}}.  
+
+
+{\ttfamily \#include $<$defs.\+h$>$}\newline
+{\ttfamily \#include $<$crc\+\_\+check.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{movement_8h_ab0a50219d4aeba12448075769aca562a}{close\+Door}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_a0733525b77710d1c965898c384c1da68}{open\+Door}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_af5396da22169ea017cc7879f286adfb1}{move\+Up}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_ab57ce3c3ba95003cb28c210bdbcd3080}{move\+Down}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_aacf6bf8e121fea8b0a92d7197b73fe27}{stop}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{movement_8h_a63380825f101b06949574904e14fb848}{get\+Position}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_acbba3162365bd70bee31da705aeed8ce}{show\+Direction}} (void)
+\item 
+void \mbox{\hyperlink{movement_8h_a64f3a941dfe06eacc5aa6bf581cead19}{chose\+Where\+To\+Move}} (void)
+\item 
+bool \mbox{\hyperlink{movement_8h_ad5bbb4c368cf4737d911c629e289bbb6}{is\+Floor\+In\+Queue}} (uint8\+\_\+t button\+Pressed)
+\item 
+void \mbox{\hyperlink{movement_8h_a3e8ddd5bb407d6d9985b3cf5d78312da}{reset\+Buttons}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{movement_8h_aff928c3951741a0fadc56ed8e631dc84}{last\+Position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subor obsahuje hlavicky funkcii suboru \mbox{\hyperlink{movement_8c}{movement.\+c}}. 
+
+Subor obsahuje hlavicky funkcii, deklaraciu pouzitych premennych a tiez poli 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{movement_8h_a64f3a941dfe06eacc5aa6bf581cead19}\label{movement_8h_a64f3a941dfe06eacc5aa6bf581cead19}} 
+\index{movement.h@{movement.h}!choseWhereToMove@{choseWhereToMove}}
+\index{choseWhereToMove@{choseWhereToMove}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{choseWhereToMove()}{choseWhereToMove()}}
+{\footnotesize\ttfamily void chose\+Where\+To\+Move (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia urcujuca ktorym smerom sa vytah vyberie na zaklade aktualneho poschodia \mbox{\Hypertarget{movement_8h_ab0a50219d4aeba12448075769aca562a}\label{movement_8h_ab0a50219d4aeba12448075769aca562a}} 
+\index{movement.h@{movement.h}!closeDoor@{closeDoor}}
+\index{closeDoor@{closeDoor}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{closeDoor()}{closeDoor()}}
+{\footnotesize\ttfamily void close\+Door (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Hlavicky funkcii
+
+Funkcia na zavretie dveri vytahu \mbox{\Hypertarget{movement_8h_a63380825f101b06949574904e14fb848}\label{movement_8h_a63380825f101b06949574904e14fb848}} 
+\index{movement.h@{movement.h}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na ziskanie cisla poschodia kabiny
+
+\begin{DoxyReturn}{Returns}
+Cislo poschodia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{movement_8h_ad5bbb4c368cf4737d911c629e289bbb6}\label{movement_8h_ad5bbb4c368cf4737d911c629e289bbb6}} 
+\index{movement.h@{movement.h}!isFloorInQueue@{isFloorInQueue}}
+\index{isFloorInQueue@{isFloorInQueue}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{isFloorInQueue()}{isFloorInQueue()}}
+{\footnotesize\ttfamily bool is\+Floor\+In\+Queue (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{button\+Pressed }\end{DoxyParamCaption})}
+
+Funkcia na zistenie, ci uz je aktualne stlacene poschodie v poli poschodi cakajucich na prichod kabiny
+
+
+\begin{DoxyParams}{Parameters}
+{\em button\+Pressed} & Aktualne stlacene tlacidlo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Je v rade -\/ nenulova hodnota, nie je v rade -\/ nulova hodnota 
+\end{DoxyReturn}
+\mbox{\Hypertarget{movement_8h_ab57ce3c3ba95003cb28c210bdbcd3080}\label{movement_8h_ab57ce3c3ba95003cb28c210bdbcd3080}} 
+\index{movement.h@{movement.h}!moveDown@{moveDown}}
+\index{moveDown@{moveDown}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{moveDown()}{moveDown()}}
+{\footnotesize\ttfamily void move\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na pohyb vytahu smerom nadol \mbox{\Hypertarget{movement_8h_af5396da22169ea017cc7879f286adfb1}\label{movement_8h_af5396da22169ea017cc7879f286adfb1}} 
+\index{movement.h@{movement.h}!moveUp@{moveUp}}
+\index{moveUp@{moveUp}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{moveUp()}{moveUp()}}
+{\footnotesize\ttfamily void move\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na pohyb vytahu smerom nahor \mbox{\Hypertarget{movement_8h_a0733525b77710d1c965898c384c1da68}\label{movement_8h_a0733525b77710d1c965898c384c1da68}} 
+\index{movement.h@{movement.h}!openDoor@{openDoor}}
+\index{openDoor@{openDoor}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{openDoor()}{openDoor()}}
+{\footnotesize\ttfamily void open\+Door (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na otvorenie dveri vytahu \mbox{\Hypertarget{movement_8h_a3e8ddd5bb407d6d9985b3cf5d78312da}\label{movement_8h_a3e8ddd5bb407d6d9985b3cf5d78312da}} 
+\index{movement.h@{movement.h}!resetButtons@{resetButtons}}
+\index{resetButtons@{resetButtons}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{resetButtons()}{resetButtons()}}
+{\footnotesize\ttfamily void reset\+Buttons (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia resetujuca priznaky aktualne stlaceneho tlacidla poschodia a smeru vytahu po tom, co zastavi na urcenom poschodi \mbox{\Hypertarget{movement_8h_acbba3162365bd70bee31da705aeed8ce}\label{movement_8h_acbba3162365bd70bee31da705aeed8ce}} 
+\index{movement.h@{movement.h}!showDirection@{showDirection}}
+\index{showDirection@{showDirection}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{showDirection()}{showDirection()}}
+{\footnotesize\ttfamily void show\+Direction (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na zobrazenie smeru kabiny a cislo poschodia, na ktorom sa nachadza. Ak sa vytah inicializuje, zobrazi sa namiesto cisla poschodia \char`\"{}\+Init\char`\"{} \mbox{\Hypertarget{movement_8h_aacf6bf8e121fea8b0a92d7197b73fe27}\label{movement_8h_aacf6bf8e121fea8b0a92d7197b73fe27}} 
+\index{movement.h@{movement.h}!stop@{stop}}
+\index{stop@{stop}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia na zastavenie motoru vytahu 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{movement_8h_aff928c3951741a0fadc56ed8e631dc84}\label{movement_8h_aff928c3951741a0fadc56ed8e631dc84}} 
+\index{movement.h@{movement.h}!lastPosition@{lastPosition}}
+\index{lastPosition@{lastPosition}!movement.h@{movement.h}}
+\doxysubsubsection{\texorpdfstring{lastPosition}{lastPosition}}
+{\footnotesize\ttfamily uint8\+\_\+t last\+Position}
+
+Deklaracie premennych a poli
+
+Deklaracie premennych 

@@ -1,0 +1,53 @@
+\hypertarget{cmd__processing_8c}{}\doxysection{source/cmd\+\_\+processing.c File Reference}
+\label{cmd__processing_8c}\index{source/cmd\_processing.c@{source/cmd\_processing.c}}
+
+
+Subor obsahuje funkcie spracovavajuce prijate spravy.  
+
+
+{\ttfamily \#include $<$cmd\+\_\+processing.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cmd__processing_8c_a609c001fbd565d2fefaf3d35fd0fd459}{execute\+Command}} (uint8\+\_\+t sender, uint8\+\_\+t \+\_\+data)
+\item 
+void \mbox{\hyperlink{cmd__processing_8c_a18042dba2bb6485eab9d2dacaa10a168}{prepare\+For\+New\+Msg}} (void)
+\item 
+void \mbox{\hyperlink{cmd__processing_8c_ac0fed4fb18bece58c851f7d76f8ebe38}{delay}} (int millis)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subor obsahuje funkcie spracovavajuce prijate spravy. 
+
+Subor obsahuje funkciu spracovavajucu prikazy vsetkych prijatych sprav bez ohladu na ich typ a dalsie funkcie potrebne pre spravny chod aplikacie 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cmd__processing_8c_ac0fed4fb18bece58c851f7d76f8ebe38}\label{cmd__processing_8c_ac0fed4fb18bece58c851f7d76f8ebe38}} 
+\index{cmd\_processing.c@{cmd\_processing.c}!delay@{delay}}
+\index{delay@{delay}!cmd\_processing.c@{cmd\_processing.c}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{int}]{millis }\end{DoxyParamCaption})}
+
+Funkcia sposobujuca oneskorenie \mbox{\Hypertarget{cmd__processing_8c_a609c001fbd565d2fefaf3d35fd0fd459}\label{cmd__processing_8c_a609c001fbd565d2fefaf3d35fd0fd459}} 
+\index{cmd\_processing.c@{cmd\_processing.c}!executeCommand@{executeCommand}}
+\index{executeCommand@{executeCommand}!cmd\_processing.c@{cmd\_processing.c}}
+\doxysubsubsection{\texorpdfstring{executeCommand()}{executeCommand()}}
+{\footnotesize\ttfamily void execute\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sender,  }\item[{uint8\+\_\+t}]{\+\_\+data }\end{DoxyParamCaption})}
+
+Funkcia spracovavajuca prikazy vsetkych prijatych sprav bez ohladu na ich typ na zaklade adresy odosielatela danej spravy. Dany prikaz moze vyvolat spatnu odpoved alebo iba ulozenie stavu urciteho elementu vytahu v prislusnej premennej
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Adresa odosielatela \\
+\hline
+{\em \+\_\+data} & Prvy bajt dat prijatej spravy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cmd__processing_8c_a18042dba2bb6485eab9d2dacaa10a168}\label{cmd__processing_8c_a18042dba2bb6485eab9d2dacaa10a168}} 
+\index{cmd\_processing.c@{cmd\_processing.c}!prepareForNewMsg@{prepareForNewMsg}}
+\index{prepareForNewMsg@{prepareForNewMsg}!cmd\_processing.c@{cmd\_processing.c}}
+\doxysubsubsection{\texorpdfstring{prepareForNewMsg()}{prepareForNewMsg()}}
+{\footnotesize\ttfamily void prepare\+For\+New\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia resetujuca premenne pouzivane pri prijimani sprav po uspesnom prijati 

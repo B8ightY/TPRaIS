@@ -1,0 +1,86 @@
+\hypertarget{crc__check_8h}{}\doxysection{source/crc\+\_\+check.h File Reference}
+\label{crc__check_8h}\index{source/crc\_check.h@{source/crc\_check.h}}
+
+
+Subor obsahuje hlavicky funkcii suboru \mbox{\hyperlink{crc__check_8c}{crc\+\_\+check.\+c}}.  
+
+
+{\ttfamily \#include $<$defs.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{crc__check_8h_a15ec18b5ebd6938b86ed844a681a332e}{calculate\+Crc}} (const unsigned char $\ast$\+\_\+data, const unsigned int size)
+\item 
+void \mbox{\hyperlink{crc__check_8h_a31c74af9332f85bb49ddca62f1188822}{send\+Ack}} (uint8\+\_\+t receiver, uint8\+\_\+t sender)
+\item 
+bool \mbox{\hyperlink{crc__check_8h_a67cc0c05bd480de9d368e5fd81fe44fb}{check\+Crc}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{crc__check_8h_ab1af1872e4258366ddf29a49988a46c0}{data}} \mbox{[}256\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subor obsahuje hlavicky funkcii suboru \mbox{\hyperlink{crc__check_8c}{crc\+\_\+check.\+c}}. 
+
+Subor obsahuje hlavicky funkcii, deklaraciu pola na ukladanie sprav a deklaraciu premennej urcujucu velkost dat v aktualne prijatej sprave 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{crc__check_8h_a15ec18b5ebd6938b86ed844a681a332e}\label{crc__check_8h_a15ec18b5ebd6938b86ed844a681a332e}} 
+\index{crc\_check.h@{crc\_check.h}!calculateCrc@{calculateCrc}}
+\index{calculateCrc@{calculateCrc}!crc\_check.h@{crc\_check.h}}
+\doxysubsubsection{\texorpdfstring{calculateCrc()}{calculateCrc()}}
+{\footnotesize\ttfamily unsigned char calculate\+Crc (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{\+\_\+data,  }\item[{const unsigned int}]{size }\end{DoxyParamCaption})}
+
+Hlavicky funkcii
+
+Funkcia sluziaca na vypocet crc \href{https://stackoverflow.com/questions/29214301/ios-how-to-calculate-crc-8-dallas-maxim-of-nsdata}{\texttt{ https\+://stackoverflow.\+com/questions/29214301/ios-\/how-\/to-\/calculate-\/crc-\/8-\/dallas-\/maxim-\/of-\/nsdata}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & Pole dat z ktorych ma byt vypocitane crc \\
+\hline
+{\em size} & Dlzka dat z ktorych sa ma pocitat crc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Crc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crc__check_8h_a67cc0c05bd480de9d368e5fd81fe44fb}\label{crc__check_8h_a67cc0c05bd480de9d368e5fd81fe44fb}} 
+\index{crc\_check.h@{crc\_check.h}!checkCrc@{checkCrc}}
+\index{checkCrc@{checkCrc}!crc\_check.h@{crc\_check.h}}
+\doxysubsubsection{\texorpdfstring{checkCrc()}{checkCrc()}}
+{\footnotesize\ttfamily bool check\+Crc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funkcia overujuca crc prijatej spravy
+
+\begin{DoxyReturn}{Returns}
+Platne crc -\/ nenulova hodnota, neplatne crc -\/ nulova hodnota 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crc__check_8h_a31c74af9332f85bb49ddca62f1188822}\label{crc__check_8h_a31c74af9332f85bb49ddca62f1188822}} 
+\index{crc\_check.h@{crc\_check.h}!sendAck@{sendAck}}
+\index{sendAck@{sendAck}!crc\_check.h@{crc\_check.h}}
+\doxysubsubsection{\texorpdfstring{sendAck()}{sendAck()}}
+{\footnotesize\ttfamily void send\+Ack (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{receiver,  }\item[{uint8\+\_\+t}]{sender }\end{DoxyParamCaption})}
+
+Funkcia, ktora posle odosielatelovi ack na prijatu spravu
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & Adresa prijimatela \\
+\hline
+{\em sender} & Adresa odosielatela \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{crc__check_8h_ab1af1872e4258366ddf29a49988a46c0}\label{crc__check_8h_ab1af1872e4258366ddf29a49988a46c0}} 
+\index{crc\_check.h@{crc\_check.h}!data@{data}}
+\index{data@{data}!crc\_check.h@{crc\_check.h}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t data\mbox{[}256\mbox{]}}
+
+Deklaracie premennych 
